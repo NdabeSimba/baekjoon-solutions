@@ -38,8 +38,8 @@
 | 24313 | [알고리즘 수업 - 점근적 표기 1](https://www.acmicpc.net/problem/24313) | [Java](./java/src/solutions/Main24313.java) | Silver     |
 | 25206 | [너의 평점은](https://www.acmicpc.net/problem/25206)                   | [Java](./java/src/Main25206.java)           | Silver     | -->
 
-| Language | %    | <code>&#124;</code> | Difficulty | %    |
-| -------- | ---- | ------------------- | ---------- | ---- |
-| Python   | 84.8 | <code>&#124;</code> | Bronze     | 80.0 |
-| Java     | 15.2 | <code>&#124;</code> | Silver     | 17.6 |
-|          |      | <code>&#124;</code> | Gold       | 2.4  |
+| Language            | %    | <code>&#124;</code> | Difficulty | %    |
+| ------------------- | ---- | ------------------- | ---------- | ---- |
+| [Python](./python/) | 84.8 | <code>&#124;</code> | Bronze     | 80.0 |
+| [Java](./java/)     | 15.2 | <code>&#124;</code> | Silver     | 17.6 |
+|                     |      | <code>&#124;</code> | Gold       | 2.4  |
