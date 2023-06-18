@@ -1,19 +1,12 @@
 import sys
 input = sys.stdin.readline
 
-count0 = [1, 0, 1]
-count1 = [0, 1, 1]
+for _ in range(3):
+    num = 0
+    for _ in range(int(input())):
+        num += int(input())
 
-def fibonacci(n):
-    length = len(count0)
-    if n >= length:
-        for i in range(length, n+1):
-            count0.append(count0[i-1] + count0[i-2])
-            count1.append(count1[i-1] + count1[i-2])
-    
-    return count0[n], count1[n]
-
-T = int(input())
-
-for _ in range(T):
-    print(*fibonacci(int(input())))
+    if num == 0:
+        print(0)
+    else:
+        print('+') if num > 0 else print('-')
