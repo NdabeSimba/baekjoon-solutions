@@ -1,18 +1,8 @@
-import sys
-input = sys.stdin.readline
+name = {
+    "NLCS" : "North London Collegiate School",
+    "BHA" : "Branksome Hall Asia",
+    "KIS" : "Korea International School",
+    "SJA" : "St. Johnsbury Academy"
+        }
 
-N, M = map(int, input().split())
-
-listen = set()
-seen = set()
-result = set()
-
-for _ in range(N):
-    listen.add(input().strip())
-
-for _ in range(M):
-    seen.add(input().strip())
-
-result = listen & seen
-
-print(len(result), *sorted(result), sep="\n")
+print(name[input()])
