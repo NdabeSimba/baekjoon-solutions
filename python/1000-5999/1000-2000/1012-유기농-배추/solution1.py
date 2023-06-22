@@ -13,8 +13,9 @@ def DFS(x, y):
     if graph[x][y] == 1:
         graph[x][y] = 0
 
-    for i in range(4):
-        DFS(x + dx[i], y + dy[i])
+        for i in range(4):
+            DFS(x + dx[i], y + dy[i])
+            
         return True
     
     return False
