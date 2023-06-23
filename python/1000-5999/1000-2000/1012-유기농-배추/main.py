@@ -7,15 +7,13 @@ dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
 def DFS(x, y):
-    if x <= -1 or x >= N or y <= -1 or y >= M:
+    if x >= M or x < 0 or y >= N or y < 0:
         return False
-
+    
     if graph[x][y] == 1:
         graph[x][y] = 0
-
         for i in range(4):
             DFS(x + dx[i], y + dy[i])
-            
         return True
     
     return False
@@ -23,7 +21,7 @@ def DFS(x, y):
 answer = []
 
 for _ in range(T):
-    M, N, K = list(map(int, sys.stdin.readline().split()))
+    M, N, K = map(int, sys.stdin.readline().split())
 
     graph = [[0] * M for _ in range(N)]
 
