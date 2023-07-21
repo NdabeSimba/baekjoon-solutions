@@ -1,11 +1,15 @@
-N, K = map(int, input().split())
-num_list = list()
+while True:
+    n = int(input())
+    num_list = list()
 
-for i in range(1, N + 1):
-    if N % i == 0:
-        num_list.append(i)
-        
-try:
-    print(num_list[K - 1])
-except:
-    print(0)
+    if n == -1:
+        break
+
+    for i in range(1, n):
+        if n % i == 0:
+            num_list.append(i)
+
+    if sum(num_list) == n:
+        print(n, "=", " + ".join(str(i) for i in num_list))
+    else:
+        print(n, "is NOT perfect.")
