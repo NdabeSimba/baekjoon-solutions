@@ -1,13 +1,19 @@
-X = int(input())
+while True:
+    num1, num2 = map(int, input().split())
 
-line = 1
-while X > line:
-    X -= line
-    line += 1
+    if num1 == num2 == 0:
+        break
 
-a, b = X, line - X + 1
+    if num1 > num2:
+        if num1 % num2 == 0:
+            print("multiple")
+        else:
+            print("neither")
+        continue
 
-if line % 2 == 0:
-    print("{}/{}".format(a, b))
-else:
-    print("{}/{}".format(b, a))
+    if num1 < num2:
+        if num2 % num1 == 0:
+            print("factor")
+        else:
+            print("neither")
+        continue
