@@ -1,29 +1,21 @@
-import sys
-input = sys.stdin.readline
+while True:
+    num_list = sorted(list(map(int, input().split())))
 
-M = int(input())
-N = int(input())
+    if num_list[0] == num_list[1] == num_list[2] == 0:
+        break
 
-num_list = list()
-
-
-def decimal(n):
-    if n == 1:
-        return False
-
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
+    if num_list[2] >= num_list[1] + num_list[0]:
+        print("Invalid")
         
-    return True
+    elif num_list[0] == num_list[1] == num_list[2]:
+        print("Equilateral")
 
+    elif (
+        num_list[0] == num_list[1]
+        or num_list[1] == num_list[2]
+        or num_list[2] == num_list[0]
+    ):
+        print("Isosceles")
 
-for num in range(M, N + 1):
-    if decimal(num):
-        num_list.append(num)
-
-if len(num_list) > 0:
-    print(sum(num_list))
-    print(min(num_list))
-else:
-    print(-1)
+    else:
+        print("Scalene")
