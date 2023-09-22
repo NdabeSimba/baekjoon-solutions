@@ -9,11 +9,14 @@ popd = list()
 location = 0
 
 for i in range(num):
-    popd.append(lis.index(lis[location]) + 1)
-    temp = lis.pop(location)
-    location += temp
+    # print(location)
+    # print(lis)
+    # print(popd)
+    temp = lis.index(lis[location])
+    temp2 = lis.pop(location)
+    popd.append(temp + 1)
+    location += temp2
     if location > num:
-        location = location % num
-    print(location)
+        location = location % num - 1
 
 print(popd)
