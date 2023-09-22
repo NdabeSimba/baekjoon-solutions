@@ -20,3 +20,6 @@ for i in range(num):
         location = location % num - 1
 
 print(popd)
+
+
+print(f'{num:.2f}')
