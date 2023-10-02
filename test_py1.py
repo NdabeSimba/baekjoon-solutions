@@ -170,14 +170,15 @@
 #     print(Pennies, "Pennies" if Pennies > 1 else "Penny")
 
 
-year = int(input())
-result = False
+# year = int(input())
+# result = False
 
-if year % 4 == 0:
-    if year % 100 == 0:
-        if year % 400 == 0:
-            result = True
-    else:
-        result = True
+# if year % 4 == 0:
+#     if year % 100 == 0:
+#         if year % 400 == 0:
+#             result = True
+#     else:
+#         result = True
 
-print(year,"- leap year") if result else print(year, "- not a leap year")
+# print(year,"- leap year") if result else print(year, "- not a leap year")
+
