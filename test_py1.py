@@ -73,27 +73,111 @@
 
 # print(f"Total Sales: ${total:.2f}")
 
-import math
-week_total = 0
-days = ["Friday Night Party", "Saturday Night Party", "Sunday Night Party"]
+# import math
+# week_total = 0
+# days = ["Friday Night Party", "Saturday Night Party", "Sunday Night Party"]
 
-for i in range(2):
-    nop, aspp, coap = map(float, input().split())
+# for i in range(2):
+#     nop, aspp, coap = map(float, input().split())
 
-    num_pizza = math.ceil(nop * aspp / 8)
-    cost = num_pizza * coap
-    tax = cost * 0.07
-    total_cost = cost + tax
-    delivery = total_cost * 0.2
-    total = total_cost + delivery
+#     num_pizza = math.ceil(nop * aspp / 8)
+#     cost = num_pizza * coap
+#     tax = cost * 0.07
+#     total_cost = cost + tax
+#     delivery = total_cost * 0.2
+#     total = total_cost + delivery
 
-    print(days[i])
-    print(f"{num_pizza} Pizzas: ${cost:.2f}")
-    print(f"Tax: ${tax:.2f}")
-    print(f"Delivery: ${delivery:.2f}")
-    print(f"Total: ${total:.2f}")
-    print("")
+#     print(days[i])
+#     print(f"{num_pizza} Pizzas: ${cost:.2f}")
+#     print(f"Tax: ${tax:.2f}")
+#     print(f"Delivery: ${delivery:.2f}")
+#     print(f"Total: ${total:.2f}")
+#     print("")
 
-    week_total += total
+#     week_total += total
 
-print(f"Weekend Total: ${week_total:.2f}")
+# print(f"Weekend Total: ${week_total:.2f}")
+
+# input_month = input()
+# input_day = int(input())
+
+# months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+# odd_months = ["January", "March", "May", "July", "August", "October", "December"]
+# even_months = ["February", "April", "June", "September", "November"]
+
+# if input_month in odd_months and (input_day > 31 or input_day < 1):
+#     print("Invalid")
+
+# elif input_month in even_months and (input_day > 30 or input_day < 1):
+#     print("Invalid")
+
+# elif input_month in months:
+#     temp = months.index(input_month)
+#     if 2 <= temp <= 5:
+#         if temp == 2 and input_day < 20:
+#             print("Winter")
+#         elif temp == 5 and input_day > 20:
+#             print("Summer")
+#         else:
+#             print("Spring")
+#     elif 6 <= temp <= 8:
+#         if temp == 8 and input_day > 21:
+#             print("Autumn")
+#         else:
+#             print("Summer")
+#     elif 9 <= temp <= 11:
+#         if temp == 11 and input_day > 20:
+#             print("Winter")
+#         else:
+#             print("Autumn")
+#     else:
+#         print("Winter")
+
+# else:
+#     print("Invalid")
+
+# ''' Type your code here. '''
+# money = int(input())
+
+# if money == 0:
+#     print("No change")
+
+# Dollars = Quarters = Dimes = Nickels = Pennies = 0
+
+# Dollars += money // 100
+# money = money % 100
+
+# Quarters += money // 25
+# money = money % 25
+
+# Dimes += money // 10
+# money = money % 10
+
+# Nickels += money // 5
+# money = money % 5
+
+# Pennies += money
+
+# if Dollars > 0:
+#     print(Dollars, "Dollars" if Dollars > 1 else "Dollar")
+# if Quarters > 0:
+#     print(Quarters, "Quarters" if Quarters > 1 else "Quarter")
+# if Dimes > 0:
+#     print(Dimes, "Dimes" if Dimes > 1 else "Dime")
+# if Nickels > 0:
+#     print(Nickels, "Nickels" if Nickels > 1 else "Nickel")
+# if Pennies > 0:
+#     print(Pennies, "Pennies" if Pennies > 1 else "Penny")
+
+
+year = int(input())
+result = False
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            result = True
+    else:
+        result = True
+
+print(year,"- leap year") if result else print(year, "- not a leap year")
