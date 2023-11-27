@@ -1,9 +1,14 @@
-def fib(n):
-    a, b = 1, 1
-    for _ in range(3, n + 1):
-        a, b = b, a + b
-    
-    return b
-    
-n = int(input())
-print(fib(n), n - 2)
+N = int(input())
+
+window = [True]*N
+num_set = set()
+
+for i in range(2, N + 1):
+    for j in range(1, N + 1):
+        temp = i*j
+        if temp in num_set:
+            num_set.remove(temp)
+        else:
+            num_set.add(temp)
+
+print(num_set)
