@@ -14,5 +14,5 @@ def is_palindrome(s):
     return recursion(s, 0, len(s) - 1, 1)
 
 
-for i in range(N):
+for _ in range(N):
     print(*is_palindrome(input()))

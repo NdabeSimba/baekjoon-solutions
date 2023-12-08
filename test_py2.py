@@ -2,6 +2,7 @@ class PhonePlan:
     # FIXME add constructor
 
     ''' Your solution goes here '''
+
     def __init__(self, num_mins=0, num_messages=0):
         self.num_mins = num_mins
         self.num_messages = num_messages
@@ -21,7 +22,7 @@ my_plan.print_plan()
 print('Dad\'s plan...', end=' ')
 dads_plan.print_plan()
 
-print('Mom\'s plan...', end= ' ')
+print('Mom\'s plan...', end=' ')
 moms_plan.print_plan()
 
 
@@ -34,7 +35,8 @@ class Duration:
         minute_string = str(self.minutes)
         if self.minutes < 10:
             minute_string = f'0{minute_string}'
-        return f'{self.hours} {minute_string}' 
+        return f'{self.hours} {minute_string}'
+
 
 one_hour = Duration(1, 0)
 print(one_hour)
@@ -47,6 +49,7 @@ class Duration:
 
     def __eq__(self, other):
         return (self.hours == other.hours) and (self.minutes == other.minutes)
+
 
 workday = Duration(9, 30)
 monday_time = Duration(8, 0)
@@ -69,6 +72,7 @@ class Duration:
                 return True
         return False
 
+
 workday = Duration(7, 0)
 monday_time = Duration(9, 0)
 tuesday_time = Duration(6, 30)
@@ -79,6 +83,7 @@ print(tuesday_time < workday)
 print(wednesday_time < workday)
 print(wednesday_time < monday_time)
 
+
 class CarRecord:
     def __init__(self):
         self.year_made = 0
@@ -87,8 +92,10 @@ class CarRecord:
     # FIXME add __str__()
 
     ''' Your solution goes here '''
+
     def __str__(self):
-	    return (f'Year: {self.year_made}, VIN: {self.car_vin}')
+        return (f'Year: {self.year_made}, VIN: {self.car_vin}')
+
 
 my_car = CarRecord()
 my_car.year_made = int(input())
