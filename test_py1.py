@@ -2,14 +2,19 @@ import sys
 
 input = sys.stdin.readline
 
-N, M = map(int, input().split())
-Nlist = list(map(int, input().split()))
+N = int(input())
+count = 0
 
-for i in range(N - 1):
-    Nlist[i + 1] += Nlist[i]
+while N % 2 != 0 and N % 3 != 0:
+    N = N - 1
+    count += 1
 
-Nlist.insert(0, 0)
+while N % 2 == 0 or N % 3 == 0:
+    if N % 3 == 0:
+        N = N / 3
+        count += 1
+    else:
+        N = N / 2
+        count += 1
 
-for _ in range(M):
-    a, b = map(int, input().split())
-    print(Nlist[b] - Nlist[a - 1])
+print(count)
