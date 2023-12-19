@@ -1,20 +1,10 @@
-import sys
+def solve_equation():
+    equation = input("Enter an equation to solve (e.g., '2x + 5 = 10'): ")
+    variable = input("Enter the variable to solve for: ")
+    try:
+        solution = eval(equation.replace(variable, "x"))
+        print(f"The solution for {variable} is: {solution}")
+    except (SyntaxError, NameError):
+        print("Invalid equation or variable.")
 
-input = sys.stdin.readline
-
-N = int(input())
-count = 0
-
-while N % 2 != 0 and N % 3 != 0:
-    N = N - 1
-    count += 1
-
-while N % 2 == 0 or N % 3 == 0:
-    if N % 3 == 0:
-        N = N / 3
-        count += 1
-    else:
-        N = N / 2
-        count += 1
-
-print(count)
+solve_equation()
